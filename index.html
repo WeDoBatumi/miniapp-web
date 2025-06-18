@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="telegram" content="webapp" />
+  <title>Миниприложение</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>📝Новая записка в Батуми🏡</h1>
+
+      <label class="media-button" for="mediaInput" id="mediaLabel">Добавить фото или видео</label>
+      <input type="file" id="mediaInput" accept="image/*,video/*" />
+
+      <div id="mediaContainer">
+        <div id="mediaPreview"></div>
+        <button id="removeBtn">Удалить</button>
+      </div>
+
+      <div class="textarea-wrapper">
+        <textarea id="autoTextarea" maxlength="1000" placeholder="Не стесняйся, пиши всё, что душе угодно! Можно даже дичь😉
+
+☝️и это обязательное поле ввода"></textarea>
+        <div id="counter">1000</div>
+      </div>
+
+      <button class="submit-btn">Опубликовать</button>
+    </div>
+  </div>
+
+  <div id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
