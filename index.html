@@ -1,38 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="telegram" content="webapp" />
-  <title>Миниприложение</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>WebApp Test</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <h1>📝Новая записка в Батуми🏡</h1>
+  <h1>🔍 Telegram WebApp Test</h1>
+  <p>Если ты видишь это — HTML загрузился.</p>
 
-      <label class="media-button" for="mediaInput" id="mediaLabel">Добавить фото или видео</label>
-      <input type="file" id="mediaInput" accept="image/*,video/*" />
+  <script>
+    alert("✅ JS загружен");
 
-      <div id="mediaContainer">
-        <div id="mediaPreview"></div>
-        <button id="removeBtn">Удалить</button>
-      </div>
-
-      <div class="textarea-wrapper">
-        <textarea id="autoTextarea" maxlength="1000" placeholder="Не стесняйся, пиши всё, что душе угодно! Можно даже дичь😉
-
-☝️и это обязательное поле ввода"></textarea>
-        <div id="counter">1000</div>
-      </div>
-
-      <button class="submit-btn">Опубликовать</button>
-    </div>
-  </div>
-
-  <div id="notification"></div>
-
-  <script src="script.js"></script>
+    if (typeof window.Telegram !== "undefined" && window.Telegram.WebApp) {
+      alert("📡 Telegram API доступен");
+      Telegram.WebApp.ready();
+    } else {
+      alert("❌ Telegram API НЕДОСТУПЕН");
+    }
+  </script>
 </body>
 </html>
