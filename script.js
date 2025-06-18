@@ -159,3 +159,22 @@ submitBtn.addEventListener('click', async () => {
   submitBtn.disabled = true;
   submitBtn.innerText = "Отправляется...";
 });
+// 🧪 Отладка: Telegram WebApp API доступность
+try {
+  alert("✅ JS загружен!");
+
+  console.log("window.Telegram:", window.Telegram);
+  console.log("window.Telegram.WebApp:", window.Telegram?.WebApp);
+
+  if (window.Telegram?.WebApp) {
+    alert("📡 Telegram API: OK");
+    Telegram.WebApp.expand();
+    Telegram.WebApp.ready();
+    console.log("✅ Telegram.WebApp готов");
+  } else {
+    alert("❌ Telegram API НЕ ДОСТУПЕН");
+  }
+} catch (e) {
+  alert("💥 Ошибка в JS: " + e.message);
+  console.error("💥 JS error:", e);
+}
